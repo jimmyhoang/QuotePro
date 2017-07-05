@@ -14,6 +14,7 @@ class QuoteBuilderViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var quoteTextView: UITextView!
     @IBOutlet weak var personTextView: UITextView!
+    var quote = Quote()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,10 @@ class QuoteBuilderViewController: UIViewController {
     }
     
     @IBAction func getQuote(_ sender: UIButton) {
+        quote.getQuote()
+        quoteTextView.text  = quote.quoteText
+        personTextView.text = quote.quoteAuthor
+        
     }
     
 }

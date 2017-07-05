@@ -16,6 +16,8 @@
 		FF5D9C411F0D688F006858C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5D9C3F1F0D688F006858C2 /* LaunchScreen.storyboard */; };
 		FF5D9C4C1F0D688F006858C2 /* QuoteProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C4B1F0D688F006858C2 /* QuoteProTests.swift */; };
 		FF5D9C591F0D6A13006858C2 /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C581F0D6A13006858C2 /* QuoteBuilderViewController.swift */; };
+		FF5D9C5D1F0D6D39006858C2 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C5C1F0D6D39006858C2 /* Quote.swift */; };
+		FF5D9C5F1F0D6D48006858C2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C5E1F0D6D48006858C2 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		FF5D9C4B1F0D688F006858C2 /* QuoteProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteProTests.swift; sourceTree = "<group>"; };
 		FF5D9C4D1F0D688F006858C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF5D9C581F0D6A13006858C2 /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
+		FF5D9C5C1F0D6D39006858C2 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		FF5D9C5E1F0D6D48006858C2 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				FF5D9C351F0D688F006858C2 /* QuotePro */,
+				FF5D9C5B1F0D6D0E006858C2 /* Support */,
 				FF5D9C4A1F0D688F006858C2 /* QuoteProTests */,
 				FF5D9C341F0D688F006858C2 /* Products */,
 				750F6A8FD1F9F76A7D3EA340 /* Pods */,
@@ -112,12 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				FF5D9C361F0D688F006858C2 /* AppDelegate.swift */,
-				FF5D9C381F0D688F006858C2 /* ViewController.swift */,
-				FF5D9C581F0D6A13006858C2 /* QuoteBuilderViewController.swift */,
 				FF5D9C3A1F0D688F006858C2 /* Main.storyboard */,
-				FF5D9C3D1F0D688F006858C2 /* Assets.xcassets */,
-				FF5D9C3F1F0D688F006858C2 /* LaunchScreen.storyboard */,
-				FF5D9C421F0D688F006858C2 /* Info.plist */,
+				FF5D9C5C1F0D6D39006858C2 /* Quote.swift */,
+				FF5D9C5E1F0D6D48006858C2 /* Photo.swift */,
+				FF5D9C5A1F0D6CF9006858C2 /* ViewControllers */,
 			);
 			path = QuotePro;
 			sourceTree = "<group>";
@@ -129,6 +132,26 @@
 				FF5D9C4D1F0D688F006858C2 /* Info.plist */,
 			);
 			path = QuoteProTests;
+			sourceTree = "<group>";
+		};
+		FF5D9C5A1F0D6CF9006858C2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF5D9C381F0D688F006858C2 /* ViewController.swift */,
+				FF5D9C581F0D6A13006858C2 /* QuoteBuilderViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FF5D9C5B1F0D6D0E006858C2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FF5D9C3D1F0D688F006858C2 /* Assets.xcassets */,
+				FF5D9C3F1F0D688F006858C2 /* LaunchScreen.storyboard */,
+				FF5D9C421F0D688F006858C2 /* Info.plist */,
+			);
+			name = Support;
+			path = QuotePro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +358,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5D9C5D1F0D6D39006858C2 /* Quote.swift in Sources */,
 				FF5D9C391F0D688F006858C2 /* ViewController.swift in Sources */,
 				FF5D9C591F0D6A13006858C2 /* QuoteBuilderViewController.swift in Sources */,
 				FF5D9C371F0D688F006858C2 /* AppDelegate.swift in Sources */,
+				FF5D9C5F1F0D6D48006858C2 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
