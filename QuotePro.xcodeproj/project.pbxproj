@@ -15,6 +15,7 @@
 		FF5D9C3E1F0D688F006858C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D9C3D1F0D688F006858C2 /* Assets.xcassets */; };
 		FF5D9C411F0D688F006858C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5D9C3F1F0D688F006858C2 /* LaunchScreen.storyboard */; };
 		FF5D9C4C1F0D688F006858C2 /* QuoteProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C4B1F0D688F006858C2 /* QuoteProTests.swift */; };
+		FF5D9C591F0D6A13006858C2 /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C581F0D6A13006858C2 /* QuoteBuilderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FF5D9C471F0D688F006858C2 /* QuoteProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoteProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5D9C4B1F0D688F006858C2 /* QuoteProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteProTests.swift; sourceTree = "<group>"; };
 		FF5D9C4D1F0D688F006858C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF5D9C581F0D6A13006858C2 /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				FF5D9C361F0D688F006858C2 /* AppDelegate.swift */,
 				FF5D9C381F0D688F006858C2 /* ViewController.swift */,
+				FF5D9C581F0D6A13006858C2 /* QuoteBuilderViewController.swift */,
 				FF5D9C3A1F0D688F006858C2 /* Main.storyboard */,
 				FF5D9C3D1F0D688F006858C2 /* Assets.xcassets */,
 				FF5D9C3F1F0D688F006858C2 /* LaunchScreen.storyboard */,
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5D9C391F0D688F006858C2 /* ViewController.swift in Sources */,
+				FF5D9C591F0D6A13006858C2 /* QuoteBuilderViewController.swift in Sources */,
 				FF5D9C371F0D688F006858C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +553,7 @@
 				FF5D9C521F0D688F006858C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF5D9C531F0D688F006858C2 /* Build configuration list for PBXNativeTarget "QuoteProTests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +562,7 @@
 				FF5D9C551F0D688F006858C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
