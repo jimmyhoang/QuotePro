@@ -15,6 +15,7 @@ class QuoteBuilderViewController: UIViewController {
     @IBOutlet weak var quoteTextView: UITextView!
     @IBOutlet weak var personTextView: UITextView!
     var quote = Quote()
+    var photo = Photo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +41,18 @@ class QuoteBuilderViewController: UIViewController {
 
     // MARK: Button Actions
     @IBAction func getImage(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            self.photo.getImage()
+            self.imageView.image = self.photo.image?.value
+        }
     }
     
     @IBAction func getQuote(_ sender: UIButton) {
-        quote.getQuote()
-        quoteTextView.text  = quote.quoteText
-        personTextView.text = quote.quoteAuthor
-        
+        DispatchQueue.main.async {
+            self.quote.getQuote()
+            self.quoteTextView.text  = self.quote.quoteText
+            self.personTextView.text = self.quote.quoteAuthor
+        }
     }
     
 }
