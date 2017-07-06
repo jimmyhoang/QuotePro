@@ -38,6 +38,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var quoteView: QuoteView!
+        
+        if let objects = Bundle.main.loadNibNamed("QuoteXib", owner: nil, options: [:]) {
+            quoteView = objects.first as! QuoteView
+            quoteView.setupWithQuote(quote: quotes[indexPath.row])
+        }
+
+        UIGraphicsBeginImageContextWithOptions(quoteView.bounds.size, true, 0)
+        quoteView.drawHierarchy(in: quoteView.bounds, afterScreenUpdates: true)
+        
+        guard let screenShot = UIGraphicsGetImageFromCurrentImageContext() else {
+            return
+        }
+        
+        UIGraphicsEndImageContext()
+        
+        let activityVC = UIActivityViewController(activityItems: [screenShot], applicationActivities: nil)
+        present(activityVC, animated: true, completion: nil)
+
+    }
+    
     // MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addQuote" {

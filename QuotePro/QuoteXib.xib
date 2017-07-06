@@ -18,7 +18,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Qo-W0-Ypr">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="401"/>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Quote" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VKO-bZ-Ru6">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VKO-bZ-Ru6">
                     <rect key="frame" x="16" y="58" width="343" height="163"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="163" id="Sfw-tK-vOj"/>
@@ -27,7 +27,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Author" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UIl-Bb-pmY">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UIl-Bb-pmY">
                     <rect key="frame" x="67" y="264" width="240" height="128"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="7vc-2v-nJm"/>
