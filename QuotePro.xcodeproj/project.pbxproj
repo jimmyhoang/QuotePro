@@ -20,6 +20,7 @@
 		FF5D9C5F1F0D6D48006858C2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C5E1F0D6D48006858C2 /* Photo.swift */; };
 		FF5D9C611F0DA7ED006858C2 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C601F0DA7ED006858C2 /* QuoteView.swift */; };
 		FF5D9C641F0DAD85006858C2 /* QuoteXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF5D9C621F0DA808006858C2 /* QuoteXib.xib */; };
+		FF5D9C661F0DBD1A006858C2 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D9C651F0DBD1A006858C2 /* QuoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FF5D9C5E1F0D6D48006858C2 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FF5D9C601F0DA7ED006858C2 /* QuoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		FF5D9C621F0DA808006858C2 /* QuoteXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteXib.xib; sourceTree = "<group>"; };
+		FF5D9C651F0DBD1A006858C2 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				FF5D9C361F0D688F006858C2 /* AppDelegate.swift */,
 				FF5D9C3A1F0D688F006858C2 /* Main.storyboard */,
+				FF5D9C651F0DBD1A006858C2 /* QuoteTableViewCell.swift */,
 				FF5D9C5C1F0D6D39006858C2 /* Quote.swift */,
 				FF5D9C601F0DA7ED006858C2 /* QuoteView.swift */,
 				FF5D9C621F0DA808006858C2 /* QuoteXib.xib */,
@@ -369,6 +372,7 @@
 				FF5D9C611F0DA7ED006858C2 /* QuoteView.swift in Sources */,
 				FF5D9C391F0D688F006858C2 /* ViewController.swift in Sources */,
 				FF5D9C591F0D6A13006858C2 /* QuoteBuilderViewController.swift in Sources */,
+				FF5D9C661F0DBD1A006858C2 /* QuoteTableViewCell.swift in Sources */,
 				FF5D9C371F0D688F006858C2 /* AppDelegate.swift in Sources */,
 				FF5D9C5F1F0D6D48006858C2 /* Photo.swift in Sources */,
 			);

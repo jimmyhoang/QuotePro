@@ -22,6 +22,7 @@ class QuoteBuilderViewController: UIViewController {
     var quote = Quote()
     var photo = Photo()
     var quoteView = QuoteView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let objects = Bundle.main.loadNibNamed("QuoteXib", owner: nil, options: [:]) {
@@ -30,8 +31,6 @@ class QuoteBuilderViewController: UIViewController {
             quoteView.clipsToBounds = true
             baseView.addSubview(quoteView)
         }
-
-       
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +68,7 @@ class QuoteBuilderViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         quote.photo = quoteView.imageView.image
         delegate?.userDidSaveQuote(quote: quote)
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
