@@ -17,9 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
     }
 
-    
     // MARK: UITableView
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -48,16 +46,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         UIGraphicsBeginImageContextWithOptions(quoteView.bounds.size, true, 0)
         quoteView.drawHierarchy(in: quoteView.bounds, afterScreenUpdates: true)
-        
         guard let screenShot = UIGraphicsGetImageFromCurrentImageContext() else {
             return
         }
-        
         UIGraphicsEndImageContext()
         
         let activityVC = UIActivityViewController(activityItems: [screenShot], applicationActivities: nil)
         present(activityVC, animated: true, completion: nil)
-
     }
     
     // MARK: Segue

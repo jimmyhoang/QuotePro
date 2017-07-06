@@ -18,7 +18,7 @@ class Quote {
         let url     = URL(string: "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")!
         let request = URLRequest(url: url)
         
-        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data: Data?, response: URLResponse?, error: Error?) in
+        let task    = URLSession.shared.dataTask(with: request as URLRequest) { (data: Data?, response: URLResponse?, error: Error?) in
             
             guard let data = data else {
                 print("no data returned from server")

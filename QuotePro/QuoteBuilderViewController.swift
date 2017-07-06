@@ -26,8 +26,8 @@ class QuoteBuilderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let objects = Bundle.main.loadNibNamed("QuoteXib", owner: nil, options: [:]) {
-            quoteView = objects.first as! QuoteView
-            quoteView.bounds = baseView.bounds
+            quoteView               = objects.first as! QuoteView
+            quoteView.bounds        = baseView.bounds
             quoteView.clipsToBounds = true
             baseView.addSubview(quoteView)
         }
