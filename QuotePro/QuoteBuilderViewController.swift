@@ -7,6 +7,9 @@
 //
 
 import UIKit
+protocol QuoteBuilderDelegate:class {
+    func userDidSaveQuote(quote:Quote)
+}
 
 class QuoteBuilderViewController: UIViewController {
 
@@ -14,13 +17,21 @@ class QuoteBuilderViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var quoteTextView: UITextView!
     @IBOutlet weak var personTextView: UITextView!
+    @IBOutlet weak var baseView: UIView!
+    weak var delegate:QuoteBuilderDelegate?
     var quote = Quote()
     var photo = Photo()
-    
+    var quoteView = QuoteView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let objects = Bundle.main.loadNibNamed("QuoteXib", owner: nil, options: [:]) {
+            quoteView = objects.first as! QuoteView
+            quoteView.bounds = baseView.bounds
+            quoteView.clipsToBounds = true
+            baseView.addSubview(quoteView)
+        }
 
-        // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,16 +54,24 @@ class QuoteBuilderViewController: UIViewController {
     @IBAction func getImage(_ sender: UIButton) {
         DispatchQueue.main.async {
             self.photo.getImage()
-            self.imageView.image = self.photo.image?.value
+            self.quoteView.imageView.image = self.photo.image?.value
         }
     }
     
     @IBAction func getQuote(_ sender: UIButton) {
         DispatchQueue.main.async {
             self.quote.getQuote()
-            self.quoteTextView.text  = self.quote.quoteText
-            self.personTextView.text = self.quote.quoteAuthor
+            self.quoteView.quoteTextView.text  = self.quote.quoteText
+            self.quoteView.authorTextView.text = self.quote.quoteAuthor
         }
+    }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        quote.photo = quoteView.imageView.image
+        delegate?.userDidSaveQuote(quote: quote)
+    }
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 }

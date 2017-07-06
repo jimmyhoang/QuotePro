@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 class Quote {
     var quoteText:String?
     var quoteAuthor:String?
+    var photo:UIImage?
     
     func getQuote() {
         let url     = URL(string: "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")!

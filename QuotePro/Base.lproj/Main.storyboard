@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,58 +70,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4N7-xN-VJV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="425"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="quote" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cj8-gw-q2D">
-                                <rect key="frame" x="67" y="111" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="person saying quote" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xps-6H-Eu9">
-                                <rect key="frame" x="67" y="291" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O6-7u-l9G">
-                                <rect key="frame" x="261" y="546" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Quote"/>
-                                <connections>
-                                    <action selector="getQuote:" destination="ExZ-aq-iUr" eventType="touchUpInside" id="bZi-wL-6zb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rl-On-DW1">
-                                <rect key="frame" x="67" y="546" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQI-5g-dTq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="401"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tQI-5g-dTq" secondAttribute="height" multiplier="375:401" id="gG1-IM-Ggv"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rl-On-DW1">
+                                <rect key="frame" x="63" y="519" width="42" height="30"/>
                                 <state key="normal" title="Image"/>
                                 <connections>
                                     <action selector="getImage:" destination="ExZ-aq-iUr" eventType="touchUpInside" id="V50-59-W3K"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O6-7u-l9G">
+                                <rect key="frame" x="259" y="519" width="42" height="30"/>
+                                <state key="normal" title="Quote"/>
+                                <connections>
+                                    <action selector="getQuote:" destination="ExZ-aq-iUr" eventType="touchUpInside" id="bZi-wL-6zb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tQI-5g-dTq" firstAttribute="top" secondItem="rZb-Pz-BTt" secondAttribute="bottom" id="2vP-t7-kV9"/>
+                            <constraint firstItem="1O6-7u-l9G" firstAttribute="leading" secondItem="4Rl-On-DW1" secondAttribute="trailing" constant="154" id="Fmy-Cg-ZJi"/>
+                            <constraint firstItem="tQI-5g-dTq" firstAttribute="leading" secondItem="XVv-Ij-L6Q" secondAttribute="leading" id="Jld-78-b26"/>
+                            <constraint firstItem="2EC-GQ-HlZ" firstAttribute="top" secondItem="4Rl-On-DW1" secondAttribute="bottom" constant="74" id="Sy4-Os-3kl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1O6-7u-l9G" secondAttribute="trailing" constant="58" id="Uv3-t4-TOV"/>
+                            <constraint firstItem="4Rl-On-DW1" firstAttribute="leading" secondItem="XVv-Ij-L6Q" secondAttribute="leadingMargin" constant="47" id="Yh1-d2-Kdn"/>
+                            <constraint firstItem="2EC-GQ-HlZ" firstAttribute="top" secondItem="1O6-7u-l9G" secondAttribute="bottom" constant="74" id="foW-3m-mqv"/>
+                            <constraint firstAttribute="trailing" secondItem="tQI-5g-dTq" secondAttribute="trailing" id="i3a-Tr-EBO"/>
+                            <constraint firstItem="1O6-7u-l9G" firstAttribute="top" secondItem="tQI-5g-dTq" secondAttribute="bottom" constant="54" id="kog-hu-6zi"/>
+                            <constraint firstItem="4Rl-On-DW1" firstAttribute="top" secondItem="tQI-5g-dTq" secondAttribute="bottom" constant="54" id="qAW-H8-mlY"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Quote Builder" id="naI-di-OrO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8Bt-k4-xdH"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vwm-EZ-Nnj"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8Bt-k4-xdH">
+                            <connections>
+                                <action selector="cancelButton:" destination="ExZ-aq-iUr" id="fSn-Te-hUB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vwm-EZ-Nnj">
+                            <connections>
+                                <action selector="saveButton:" destination="ExZ-aq-iUr" id="0Lm-aA-tOw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="imageView" destination="4N7-xN-VJV" id="6c1-ta-H13"/>
-                        <outlet property="personTextView" destination="Xps-6H-Eu9" id="588-zw-6Ul"/>
-                        <outlet property="quoteTextView" destination="cj8-gw-q2D" id="ZkJ-UM-Y6h"/>
+                        <outlet property="baseView" destination="tQI-5g-dTq" id="70Y-k7-FlI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f43-76-4K4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2972" y="-254"/>
+            <point key="canvasLocation" x="2972" y="-254.12293853073464"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dc0-zX-edp">
